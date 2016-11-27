@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to root_path, notice: "お問い合わせが完了しました！"
     else
-      render 'new'
+      render :new
     end
   end
   
