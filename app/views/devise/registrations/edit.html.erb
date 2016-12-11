@@ -8,12 +8,12 @@
       <div class="field for_mypage">
         <%= f.label :メールアドレス %><br/>
         <%= f.email_field :email, autofocus: true, \
-        class: 'form_control', placeholder: "メールアドレス" %>
+        class: 'form-control', placeholder: "メールアドレス" %>
       </div>
       
       <div class="field for_mypage">
         <%= f.label :名前 %><br/>
-        <%= f.text_field :name, class: "form_control", placeholder: "名前" %>
+        <%= f.text_field :name, class: "form-control", placeholder: "名前" %>
       </div>
       
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -25,17 +25,17 @@
         <% if @minimum_password_length %>
           <em><%= @minimum_password_length %> 文字以上で入力して下さい</em>
         <% end %><br/>
-        <%= f.password_field :password, autocomplete: "off", class: "form_control", placeholder: "パスワード" %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "パスワード" %>
       </div>
 
       <div class="field for_mypage">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form_control", placeholder: "パスワード(確認)" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "パスワード(確認)" %>
       </div>
 
       <div class="field for_mypage">
         <%= f.label :current_password %> <i>(パスワードを変更する場合は、現在のパスワードを入力して下さい)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", class: "form_control", placeholder: "パスワード" %>
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "パスワード" %>
       </div>
 
       <div class="actions">
