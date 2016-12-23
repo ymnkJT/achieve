@@ -29,6 +29,9 @@ module ActionView
 
     class FormBuilder
       def error_messages!(options = {})
+        @template.error_messages!(@object_name, options.merge(object: @object))
+      end
+      def error_css(method, options = {})
         @template.error_css(@object_name, method, options.merge(object: @object))
       end
     end
