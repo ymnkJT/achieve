@@ -5,6 +5,7 @@
     <div class="row">
       <p><%= poem.title %></p>
       <p><%= poem.content %></p>
+      <%= link_to "show", poem_path(poem.id), class: 'btn btn-default btn-sm btn-success' %>
     </div>
     <% end %>
   </div>
