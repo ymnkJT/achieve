@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <div class="row">
 <p>
   <strong>Title:</strong>
   <%= @poem.title %>
@@ -8,4 +11,7 @@
   <%= @poem.content %>
 </p>
 
-<%= link_to 'Back', poems_path %>
+<%= link_to 'Back', poems_path, class: 'btn btn-default btn-sm btn-success' %>
+ </div>
+  </div>
+</div>
