@@ -45,12 +45,12 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blogs_params)
     render :new if @blog.invalid?
   end
-  
+
   private
     def blogs_params
       params.require(:blog).permit(:title, :content)
     end
-    
+
     def set_blog
       @blog = Blog.find(params[:id])
     end
