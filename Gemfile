@@ -25,6 +25,7 @@ gem 'faker'
 gem 'rails_admin'
 gem 'cancan'
 gem 'activeresource'
+gem 'her'
 
 group :development do
   gem 'letter_opener_web'
