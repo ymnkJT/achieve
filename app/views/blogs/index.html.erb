@@ -4,15 +4,18 @@
     <h1>ブログ一覧 </h1>
     <%= link_to "ブログを作成する", new_blog_path, class: 'btn btn-default' %>
     <% @blogs.each do |blog| %>
+
     <div class="row">
-      <!-- <img src="<%= blog.user.image_url %>"> -->
       <p class="prof_img"><%= profile_img(blog.user) if profile_img(blog.user) %></p>
       <h4><strong><%= blog.title %></strong></h4>
       <p><%= blog.content %></p>
       <p>(by <%= blog.user.name %>)</p>
-      <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
-      <%= link_to "削除", blog_path(blog.id), method: :delete, \
-      data: { confirm: '本当に削除しますか？' }, class: 'btn btn-default btn-sm btn btn-danger' %>
+
+      <% if blog.user == current_user %>
+        <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除", blog_path(blog.id), method: :delete, \
+        data: { confirm: '本当に削除しますか？' }, class: 'btn btn-default btn-sm btn btn-danger' %>
+      <% end %>
     </div>
     <% end %>
   </div>
