@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    render js: { comment: @comment}
+    render :index
   end
 
   private
