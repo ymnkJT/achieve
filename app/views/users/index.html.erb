@@ -1,7 +1,7 @@
 <div class="container">
   <h2>ユーザー</h2>
   <% @users.each do |user| %>
-    <div class="container-child col-md-3 col-sm-4 col-xs-6">
+    <div class="wrapper col-md-4 col-md-offset-4 col-sm-12">
       <%= link_to user_path(user.id) do %>
         <div class="prof_img">
           <%= profile_img(user) %>
