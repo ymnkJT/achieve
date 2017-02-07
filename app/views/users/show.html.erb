@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <h2><%= @user.email %></h2>
+    <%= profile_img(@user) if profile_img(@user) %>
+  </div>
+
+  <div class="row">
+    <h3>フォローユーザー 一覧</h3>
+    <%= @user.followed_users.each do |user| %>
+      <%= render 'followed_index', user: user %>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <h3>フォローワーユーザー 一覧</h3>
+    <%= @user.followed_users.each do |user| %>
+      <%= render 'follower_index', user: user %>
+    <% end %>
+  </div>
+</div>
