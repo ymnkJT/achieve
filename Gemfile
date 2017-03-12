@@ -33,6 +33,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'dotenv-rails'
 gem 'pusher'
+gem 'fog'
 
 group :development do
   gem 'letter_opener_web'
