@@ -16,7 +16,8 @@ Devise.setup do |config|
   if Rails.env.production?
     config.omniauth :facebook, ENV["FACEBOOK_ID_PRODUCTION"], 
                                ENV["FACEBOOK_SECRET_PRODUCTION"], 
-                               scope: 'email', display: 'popup', info_fields: 'name, email'
+                               scope: 'email', display: 'popup', token_params: { parse: :json }, 
+                               info_fields: 'name, email'
     config.omniauth :twitter,  ENV["TWITTER_ID_PRODUCTION"], 
                                ENV["TWITTER_SECRET_PRODUCTION"], 
                                scope: 'email', display: 'popup', info_fields: 'name, email'
