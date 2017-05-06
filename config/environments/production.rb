@@ -13,7 +13,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'agile-basin-88531.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'http://52.197.233.56/'}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
