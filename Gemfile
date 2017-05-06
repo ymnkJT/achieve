@@ -41,7 +41,6 @@ gem 'rmagick'
 gem 'dotenv-rails'
 gem 'pusher'
 gem 'fog'
-gem 'dotenv-rails'
 gem 'unicorn'
 
 group :development do
